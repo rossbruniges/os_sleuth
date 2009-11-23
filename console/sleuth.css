@@ -1,1 +1,120 @@
-/* Console CSS to be added here */
+/*
+  CSS for the sleuth console window
+    - included as part of inital sleuth download
+*/
+/* console window */
+#test_console {
+	border: 1px solid #999;
+	background: #fff;
+	position: absolute;
+	font-size: 10px;
+	top: 10px;
+	right: 10px;
+	text-align: left;
+	-moz-border-radius: 5px;
+	-webkit-border-radius :5px;
+	-moz-box-shadow: 5px 5px 5px #000;
+	-webkit-box-shadow: 5px 5px 5px #000;
+	padding: 10px;
+	/* we need a width to constrain the box */
+	_width: 320px;
+}
+/* header - title and show/hide*/
+#test_console .hd {
+	overflow: hidden;
+	zoom: 1;
+}
+#test_console .hd p {
+	font-weight: bold;
+	font-size: 1.6em;
+	float: left;
+}
+#test_console a {
+	float: right;
+	font-weight: bold;
+	padding-right: 20px;
+	background: transparent url(icons/hide.png) no-repeat top right;
+	line-height: 1.6;
+	margin-left: 10px;
+}
+#test_console a.show {
+	background-image: url(icons/show.png);
+}
+/*  main body */
+#test_console .bd {
+	width: 300px;
+	height: 300px;
+	margin-top: 10px;
+	overflow-y:scroll;
+}
+#test_console .bd a {
+	float: none;
+	margin-top: 1em;
+	display: block;
+	background: none;
+	padding-right: 0;
+	margin-left: 0;
+}
+#test_console .bd .title {
+	font-size: 1.2em;
+	padding-top: 0.5em;
+	float: none;
+	clear:both;
+	font-weight: bold;
+}
+/* messages - fails inherit from this but over-write colour and icons */
+#test_console .bd .message {
+	border-bottom: 2px solid #fff;
+	padding: 0.2em 5px 0.2em 50px;
+	background: transparent url(icons/win.jpg) no-repeat 5px 5px;
+	min-height: 50px;
+	/* IE has epic min-height FAIL */
+	_height: 50px;
+	margin-right: 10px;
+	background-color: #E5EECC;
+	color: #617F10;
+}
+#test_console .bd div:last-child {
+	border-bottom: none;
+}
+#test_console .bd div.fail {
+	background-image: url(icons/fail.jpg);
+	background-color: #FCEEF0;
+	color: #B90D33;
+}
+#test_console p,
+#test_console ul,
+#test_console fieldset {
+	font-size: 1.2em;
+}
+#test_console li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+#test_console p em {
+	font-style: normal;
+	font-weight: bold;
+}
+#test_console div.test_summary {
+	background: none;
+	padding-left: 0;
+	color: #666;
+	width: 45%;
+	float: left;
+}
+/* filters */
+#test_console div.test_filters {
+	width: 45%;
+	float: right;
+}
+#test_console div.test_filters legend {
+	font-weight: bold;
+}
+#test_console div.test_filters label {
+	cursor: pointer;
+	float: none;
+	padding-top: 0;
+}
+#test_console div.test_filters input {
+	margin-right: 10px;
+}
