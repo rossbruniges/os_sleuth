@@ -95,7 +95,7 @@
 	font-style: normal;
 	font-weight: bold;
 }
-#test_console div.test_summary {
+#test_console div.summary {
 	background: none;
 	padding-left: 0;
 	color: #666;
@@ -103,18 +103,18 @@
 	float: left;
 }
 /* filters */
-#test_console div.test_filters {
+#test_console div.filters {
 	width: 45%;
 	float: right;
 }
-#test_console div.test_filters legend {
+#test_console div.filters legend {
 	font-weight: bold;
 }
-#test_console div.test_filters label {
+#test_console div.filters label {
 	cursor: pointer;
 	float: none;
 	padding-top: 0;
 }
-#test_console div.test_filters input {
+#test_console div.filters input {
 	margin-right: 10px;
 }
